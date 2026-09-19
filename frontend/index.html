@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarePage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header>
+        <h1>CarePage.</h1>
+    </header>
+    <input type="text" id="patientNameInput" placeholder="Enter patient name...">
+    <input type="date" id="dateInput"><i data-lucide="calendar-days"></i>
+    <button id="searchBtn"><i data-lucide="search"></i></button>
+    <input type="file" id="imageUpload" accept="image/*" capture="environment">
+    <label for="imageUpload"><i data-lucide="camera"></i>Upload a Prescription...</label>
+    <section id="recentPrescriptionsSection">
+        <h2>Recent Prescriptions</h2>
+        <div class="container" id="recentPrescriptionsContainer">
+        </div>
+    </section>
+    <section id="searchResultsSection">
+        <h2>Search Results</h2>
+        <div class="container" id="searchResultsContainer">
+        </div>
+    </section>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>
