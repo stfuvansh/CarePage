@@ -8,19 +8,22 @@ const searchResultsSection = document.getElementById('searchResultsSection');
 const searchResultsContainer = document.getElementById('searchResultsContainer');
 
 let selectedImage = null;
-imageUpload.addEventListener('change', function() {
+let prescriptionData = null;
+
+imageUpload.addEventListener('change', function () {
     const imageFile = imageUpload.files;
     if (imageFile.length > 0) {
         selectedImage = imageFile[0];
-         if (!selectedImage.type.startsWith('image/')) {
+        if (!selectedImage.type.startsWith('image/')) {
             return;
-         }
+        }
+        const prescriptionData = {
+            patientName: patientNameInput.value,
+            prescriptionDate: dateInput.value,
+            image: selectedImage
+        };
+        console.log(prescriptionData);
     }
 });
 
-const prescriptionData = {
-    patientName: patientNameInput.value,
-    prescriptionDate: dateInput.value,
-    image: selectedImage
-};
 
