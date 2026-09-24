@@ -25,5 +25,3 @@ imageUpload.addEventListener('change', function () {
         console.log(prescriptionData);
     }
 });
-
-
